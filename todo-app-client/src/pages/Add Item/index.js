@@ -10,7 +10,7 @@ function AddItem() {
         <textarea
           class="form-control"
           id="exampleFormControlTextarea1"
-          rows="3"
+          rows="5"
           placeholder="Task Description"
         ></textarea>
       </div>

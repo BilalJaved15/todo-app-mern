@@ -23,11 +23,19 @@ button:hover {
 }
 
 textarea {
-    width: 70%;
     resize: none;
     color: black!important;
+    background: rgb(255, 255, 255, 0.4);
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    border: 1px solid white;
 }
 
 textarea:focus {
     box-shadow: none;
+}
+
+button {
+    margin-top: 10px;
 }

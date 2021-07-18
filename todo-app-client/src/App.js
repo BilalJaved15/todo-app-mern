@@ -16,7 +16,7 @@ function App() {
           </NoNavLayout>
         </Route>
 
-        <Route path="/">
+        <Route exact path="/">
           <HeadNavLayout>
             <Home />
           </HeadNavLayout>
