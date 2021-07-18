@@ -1,0 +1,9 @@
+.headerLayout__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerLayout__listContainer {
+    margin-top: 10px;
+}

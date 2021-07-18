@@ -1,0 +1,25 @@
+.navbar {
+    margin-top: 30px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navbar button {
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: white;
+    border: 2px solid black;
+    color: black !important;
+    transition: all 0.3s ease-in-out;
+}
