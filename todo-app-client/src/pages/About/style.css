@@ -1,0 +1,54 @@
+.about__container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.about__container h3 {
+    word-wrap: break-word;
+    text-align: center;
+    width: 50%;
+}
+
+.about__socials {
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 3px solid white;
+    border-radius: 40px;
+}
+
+.about__socials i {
+    color: white;
+    font-size: 2em;
+    margin: 15px;
+}
+
+.bi-facebook:hover {
+    color: #1977f3;
+}
+
+.bi-instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+.bi-linkedin:hover {
+    color: #0177b4;
+}
+
+.bi-envelope-fill:hover {
+    color: #dfbd94;
+}
+
+.about_btn {
+    margin-top: 20px !important;
+}

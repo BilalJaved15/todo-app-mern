@@ -20,6 +20,14 @@
 .navbar button:hover {
     background-color: white;
     border: 2px solid black;
-    color: black !important;
+    -webkit-border-image: linear-gradient(to right, #8e44ad, #c0392b);
     transition: all 0.3s ease-in-out;
+}
+
+.navbar button:hover>span {
+    background-image: linear-gradient(to right, #8e44ad, #c0392b);
+    background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
 }

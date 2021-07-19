@@ -14,7 +14,16 @@ function AddItem() {
           placeholder="Task Description"
         ></textarea>
       </div>
-      <button>Add Item!</button>
+      <div className="btn-container">
+        <button>
+          <span>Add Item!</span>
+        </button>
+        <Link to="/">
+          <button>
+            <span>Cancel</span>
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }

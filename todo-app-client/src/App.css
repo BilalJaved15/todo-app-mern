@@ -27,3 +27,29 @@ img {
     max-width: 100%;
     display: block;
 }
+
+button {
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 50px;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    border: 2px solid black;
+    -webkit-border-image: linear-gradient(to right, #8e44ad, #c0392b);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover>span {
+    background-image: linear-gradient(to right, #8e44ad, #c0392b);
+    background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}

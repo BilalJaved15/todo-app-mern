@@ -4,16 +4,20 @@ import NoNavLayout from "./Layouts/NoNavLayout";
 import Home from "./pages/Home";
 import AddItem from "./pages/Add Item";
 import "./App.css";
+import About from "./pages/About";
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-
         <Route path="/add-item">
           <NoNavLayout>
-            <AddItem/>
+            <AddItem />
           </NoNavLayout>
+        </Route>
+
+        <Route path="/about">
+          <About />
         </Route>
 
         <Route exact path="/">
@@ -21,7 +25,6 @@ function App() {
             <Home />
           </HeadNavLayout>
         </Route>
-
       </Switch>
     </BrowserRouter>
   );
