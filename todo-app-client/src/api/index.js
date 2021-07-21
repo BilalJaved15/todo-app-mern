@@ -6,3 +6,12 @@ export const GET_ITEM = () =>
         method: "GET",
         url: ("http://127.0.0.1:5000/get-items"),
     });
+
+export const ADD_ITEM = (utitle) =>
+    axios({
+        method: "POST",
+        url: ("http://127.0.0.1:5000/add-item"),
+        data: {
+            title: utitle
+        }
+    });

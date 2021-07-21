@@ -24,14 +24,14 @@ mongoose.connect(mongodb, { useNewUrlParser: true, useUnifiedTopology: true }).t
 }).catch(err => (console.log(err)))
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + '/templates/index.html')
+    res.send("<h1>TODO APP SERVER</h1>")
 })
 
 
-app.get("/add-item", async(req, res) => {
-    const myresponse = await itemsModel.createItem("HEHE")
-    console.log(myresponse)
-    res.send(myresponse)
+app.post("/add-item", async(req, res) => {
+    console.log("SERVER CALLED AT /add-item")
+    const myresponse = await itemsModel.createItem(req.body.title)
+    res.json(myresponse)
 })
 
 app.get("/get-items", async(req, res) => {

@@ -17,14 +17,14 @@ function Home() {
         console.log(err);
       });
   }, []);
-  
+
   return (
     <div className="list__container">
       <h4>Your Current List: </h4>
       <ul>
         {items &&
           items.map((item) => {
-            return <li>{item.title}</li>;
+            return (<li><span>{item.title} <i className="bi bi-trash del-icon"/></span></li>);
           })}
       </ul>
     </div>

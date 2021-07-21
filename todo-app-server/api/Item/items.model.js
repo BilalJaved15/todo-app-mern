@@ -34,7 +34,8 @@ const itemsModel = {
             return returnData;
 
         }
-    })
+    }),
+
 }
 
 export default itemsModel
