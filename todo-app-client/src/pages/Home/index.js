@@ -1,17 +1,34 @@
-import React from 'react'
-import './style.css'
+import React from "react";
+import "./style.css";
+import { GET_ITEM } from "../../api/index.js";
+import { useState, useEffect } from "react";
+require("dotenv").config();
 
 function Home() {
-    return (
-        <div class="list__container">
-            <h4>Your Current List: </h4>
-            <ul>
-                <li>Placeholder 1!</li>
-                <li>Placeholder 2!</li>
-                <li>Placeholder 3!</li>
-            </ul>
-        </div>
-    )
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    GET_ITEM()
+      .then((res) => {
+        if (res.data.success === 1) {
+          setItems(res.data.data);
+        } else throw Error();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  
+  return (
+    <div className="list__container">
+      <h4>Your Current List: </h4>
+      <ul>
+        {items &&
+          items.map((item) => {
+            return <li>{item.title}</li>;
+          })}
+      </ul>
+    </div>
+  );
 }
 
-export default Home
+export default Home;

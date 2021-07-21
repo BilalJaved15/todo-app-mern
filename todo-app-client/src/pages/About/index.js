@@ -27,7 +27,10 @@ function About() {
         <a href="https://mail.google.com/mail/u/0/?fs=1&to=bilaljavedblackops15@gmail.com&tf=cm" target="_blank">
           <i class="bi bi-envelope-fill" />
         </a>
-      </div>
+        <a href= "https://github.com/BilalJaved15" target="_blank">
+        <i class="bi bi-github"/>
+        </a>
+      </div>  
       <Link to="/">
         <button className="about_btn">
           <span>Back To Home</span>
