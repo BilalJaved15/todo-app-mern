@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
-import Item from "./items.schema.js";
+import Item from "./item.schema.js";
 
-const itemsModel = {
+const itemModel = {
     createItem: (async(userTitle) => {
         const item = new Item({
             title: userTitle
@@ -17,7 +17,6 @@ const itemsModel = {
             returnData.data = e
         } finally {
             return returnData;
-
         }
     }),
     getItems: (async() => {
@@ -35,7 +34,21 @@ const itemsModel = {
 
         }
     }),
+    deleteItem: (async(id) => {
+        const returnData = {};
+        try {
+            let temp = await Item.findByIdAndDelete(id);
+            returnData.success = 1
+            returnData.data = temp
+        } catch (e) {
+            console.log(e)
+            returnData.success = 0
+            returnData.data = e
+        } finally {
+            return returnData;
 
+        }
+    })
 }
 
-export default itemsModel
+export default itemModel

@@ -1,18 +1,24 @@
-import React from 'react'
-import Header from '../../Components/Header'
-import NavBar from '../../Components/NavBar'
-import "./style.css"
+import React from "react";
+import Header from "../../Components/Header";
+import LoginBar from "../../Components/LoginBar";
+import NavBar from "../../Components/NavBar";
+import "./style.css";
 
-function HeadNavLayout(props) {
-    return (
-        <div className="headerLayout__container">
-            <Header/>
-            <NavBar/>
-            <div className= "headerLayout__listContainer">
-            {props.children}
-            </div>
-        </div>
-    )
+const myUser = {
+    name: "Muhammad Bilal"
 }
 
-export default HeadNavLayout
+function HeadNavLayout(props) {
+  return (
+    <div>
+      <LoginBar user={myUser}/>
+      <div className="headerLayout__container">
+        <Header />
+        <NavBar />
+        <div className="headerLayout__listContainer">{props.children}</div>
+      </div>
+    </div>
+  );
+}
+
+export default HeadNavLayout;

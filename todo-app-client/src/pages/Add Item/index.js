@@ -23,9 +23,9 @@ function AddItem() {
   return (
     <div className="addItem__formContainer">
       <h2>Add an Item</h2>
-      <div class="mb-3">
+      <div className="mb-3">
         <textarea
-          class="form-control"
+          className="form-control"
           id="exampleFormControlTextarea1"
           rows="5"
           placeholder="Task Description"

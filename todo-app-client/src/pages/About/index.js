@@ -16,19 +16,19 @@ function About() {
       </h3>
       <div className="about__socials">
         <a href="https://www.facebook.com/bilaljavedkewl/" target="_blank">
-          <i class="bi bi-facebook" />
+          <i className="bi bi-facebook" />
         </a>
         <a href="https://www.instagram.com/bilaljavedkewl/" target="_blank">
-          <i class="bi bi-instagram" />
+          <i className="bi bi-instagram" />
         </a>
         <a href="https://www.linkedin.com/in/muhammadbilal2001/" target="_blank">
-          <i class="bi bi-linkedin" />
+          <i className="bi bi-linkedin" />
         </a>
         <a href="https://mail.google.com/mail/u/0/?fs=1&to=bilaljavedblackops15@gmail.com&tf=cm" target="_blank">
-          <i class="bi bi-envelope-fill" />
+          <i className="bi bi-envelope-fill" />
         </a>
         <a href= "https://github.com/BilalJaved15" target="_blank">
-        <i class="bi bi-github"/>
+        <i className="bi bi-github"/>
         </a>
       </div>  
       <Link to="/">

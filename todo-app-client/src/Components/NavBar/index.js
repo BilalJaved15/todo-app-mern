@@ -4,7 +4,7 @@ import "./style.css";
 
 function NavBar() {
   return (
-    <div class="navbar">
+    <div className="navbar">
       <Link to="/add-item">
         <button>
           <span>Add Items</span>

@@ -15,3 +15,12 @@ export const ADD_ITEM = (utitle) =>
             title: utitle
         }
     });
+
+export const DELETE_ITEM = (uid) =>
+    axios({
+        mehtod: "DELETE",
+        url: (`http://127.0.0.1:5000/delete-item/`),
+        data: {
+            id: uid
+        }
+    })

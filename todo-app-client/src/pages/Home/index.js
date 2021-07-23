@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { GET_ITEM } from "../../api/index.js";
+import { GET_ITEM, DELETE_ITEM } from "../../api/index.js";
 import { useState, useEffect } from "react";
 require("dotenv").config();
 
@@ -18,14 +18,37 @@ function Home() {
       });
   }, []);
 
+  const removeItem = (id) => {
+    setItems(items.filter((item) => {
+      console.log(item._id, id, item._id === id)
+      return !(item._id === id);
+    }));
+    DELETE_ITEM(id).then((res) => {
+      if(res.data.success===1){
+        console.log("DELETED!")
+      } else throw Error()
+    }).catch((err) => console.log(err))
+    console.log(items)
+  };
+
   return (
     <div className="list__container">
       <h4>Your Current List: </h4>
       <ul>
-        {items &&
+        {items.length > 0 ?
           items.map((item) => {
-            return (<li><span>{item.title} <i className="bi bi-trash del-icon"/></span></li>);
-          })}
+            return (
+              <li key={item._id}>
+                <span>
+                  {item.title}{" "}
+                  <i
+                    className="bi bi-trash del-icon"
+                    onClick={() => removeItem(item._id)}
+                  />
+                </span>
+              </li>
+            );
+          }) : <li>List is Empty!</li>}
       </ul>
     </div>
   );
