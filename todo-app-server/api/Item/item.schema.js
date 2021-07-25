@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+const mongoose = require("mongoose");
 const schema = mongoose.Schema
 
 const itemSchema = new schema({
@@ -6,12 +6,12 @@ const itemSchema = new schema({
         type: String,
         required: true
     },
-    userEmail: {
-        type: String,
-        required: true
-    }
+    // userEmail: {
+    //     type: String,
+    //     required: true
+    // }
 }, { timestamps: true })
 
 const Item = mongoose.model('Item', itemSchema)
 
-export default Item
+module.exports = Item;

@@ -6,6 +6,13 @@ import AddItem from "./pages/Add Item";
 import "./App.css";
 import About from "./pages/About";
 
+
+const User = {
+  name: "Muhammad Bilal",
+  onSignup: false,
+
+}
+
 function App() {
   return (
     <BrowserRouter>

@@ -11,7 +11,7 @@ const myUser = {
 function HeadNavLayout(props) {
   return (
     <div>
-      <LoginBar user={myUser}/>
+      <LoginBar user={props.user}/>
       <div className="headerLayout__container">
         <Header />
         <NavBar />

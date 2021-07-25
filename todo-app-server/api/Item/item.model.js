@@ -1,5 +1,5 @@
-import mongoose from "mongoose"
-import Item from "./item.schema.js";
+const mongoose = require("mongoose");
+const Item = require("./item.schema.js");
 
 const itemModel = {
     createItem: (async(userTitle) => {
@@ -51,4 +51,4 @@ const itemModel = {
     })
 }
 
-export default itemModel
+module.exports = itemModel

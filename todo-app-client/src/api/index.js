@@ -1,16 +1,15 @@
 import axios from "axios";
-require('dotenv').config();
 
 export const GET_ITEM = () =>
     axios({
         method: "GET",
-        url: ("http://127.0.0.1:5000/get-items"),
+        url: (process.env.REACT_APP_TODO_SERVER_URL + "/get-items"),
     });
 
 export const ADD_ITEM = (utitle) =>
     axios({
         method: "POST",
-        url: ("http://127.0.0.1:5000/add-item"),
+        url: (process.env.REACT_APP_TODO_SERVER_URL + "/add-item"),
         data: {
             title: utitle
         }
@@ -18,8 +17,8 @@ export const ADD_ITEM = (utitle) =>
 
 export const DELETE_ITEM = (uid) =>
     axios({
-        mehtod: "DELETE",
-        url: (`http://127.0.0.1:5000/delete-item/`),
+        method: "DELETE",
+        url: (process.env.REACT_APP_TODO_SERVER_URL + "/delete-item"),
         data: {
             id: uid
         }

@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
-import User from "./user.schema.js";
+const mongoose = require("mongoose");
+const User = require("./user.schema.js");
 
-export const userModel = {
+const userModel = {
     createUser: (async(uname, uemail, upassword) => {
         const user = new User({
             name: uname,
@@ -22,3 +22,5 @@ export const userModel = {
         }
     })
 }
+
+module.exports = userModel;
